@@ -11,7 +11,12 @@ const navLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-const Header = () => {
+interface HeaderProps {
+  brandName?: string;
+  brandSubtitle?: string;
+}
+
+const Header = ({ brandName = "Malak Al Reem", brandSubtitle = "Premium Real Estate" }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -22,11 +27,11 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">M</span>
+              <span className="text-primary-foreground font-bold text-xl">{brandName.charAt(0)}</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-white leading-tight">Malak Al Reem</span>
-              <span className="text-xs text-secondary leading-tight">Premium Real Estate</span>
+              <span className="font-bold text-lg text-white leading-tight">{brandName}</span>
+              <span className="text-xs text-secondary leading-tight">{brandSubtitle}</span>
             </div>
           </Link>
 

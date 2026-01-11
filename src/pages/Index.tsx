@@ -41,7 +41,7 @@ const ConstructionView = () => (
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://videos.pexels.com/video-files/2040081/2040081-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2024/05/06/210905_large.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
       </div>
@@ -100,6 +100,76 @@ const ConstructionView = () => (
       </div>
     </section>
 
+    {/* Promo Video Section */}
+    <section className="py-24 bg-black">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12 animate-fade-up">
+          <span className="text-yellow-500 font-bold tracking-widest uppercase text-sm mb-4 block">
+            Construction in Motion
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
+            See Our Expertise
+          </h2>
+        </div>
+
+        <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(234,179,8,0.1)] animate-fade-up animation-delay-200">
+          <video
+            controls
+            className="w-full h-full object-cover"
+            poster={projectCommercial}
+          >
+            <source src="https://cdn.pixabay.com/video/2021/08/04/83901-584764426_large.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    {/* AI Construction Section */}
+    <section className="relative py-32 overflow-hidden bg-black">
+      <div className="absolute inset-0 opacity-40">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="https://cdn.pixabay.com/video/2025/02/11/257796_large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-yellow-500 text-xs font-bold uppercase tracking-widest animate-pulse">
+            <span className="w-2 h-2 bg-yellow-500 rounded-full" />
+            AI-Driven Engineering
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+            The Future of <span className="text-yellow-500">Construction</span>
+          </h2>
+          <p className="text-xl text-gray-400 leading-relaxed font-light">
+            Leveraging advanced AI algorithms for structural optimization, site safety monitoring,
+            and automated project management. We don't just build; we engineer the future with
+            precision-driven technology.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
+            {[
+              { label: "Precision", value: "99.9%" },
+              { label: "Efficiency", value: "+40%" },
+              { label: "Safety", value: "Level 5" }
+            ].map((stat, i) => (
+              <div key={i} className="p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl">
+                <div className="text-3xl font-bold text-yellow-500 mb-1">{stat.value}</div>
+                <div className="text-xs text-gray-500 uppercase tracking-widest">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
     {/* Project Showcase Strip */}
     <section className="py-24 bg-black">
       <div className="container mx-auto px-6">
@@ -151,7 +221,7 @@ const RealEstateView = () => (
         className="absolute top-0 left-0 w-full h-full object-cover scale-105"
         poster={heroImage}
       >
-        <source src="https://cdn.pixabay.com/video/2016/09/21/5189-183786483_large.mp4" type="video/mp4" />
+        <source src="https://cdn.pixabay.com/video/2022/03/18/111204-689949818_large.mp4" type="video/mp4" />
       </video>
 
       {/* Luxury Overlay Gradient */}
@@ -189,6 +259,76 @@ const RealEstateView = () => (
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
         <span className="text-[10px] uppercase tracking-widest">Scroll to Explore</span>
+      </div>
+    </section>
+
+    {/* AI Real Estate Section */}
+    <section className="relative py-32 overflow-hidden bg-white">
+      <div className="absolute inset-0 opacity-10">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="https://cdn.pixabay.com/video/2023/02/19/151350-800680848_large.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8 animate-fade-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-accent text-xs font-bold uppercase tracking-widest">
+              <span className="w-2 h-2 bg-accent rounded-full animate-ping" />
+              Machine Learning Powered
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight font-serif italic">
+              AI-Powered <br />
+              <span className="text-accent not-italic font-sans">Property Intelligence</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Find your perfect match with our proprietary AI matching engine.
+              We analyze thousands of data points—from market trends to lifestyle
+              preferences—to ensure your investment is future-proof.
+            </p>
+            <ul className="space-y-4">
+              {[
+                "Predictive Market Valuation",
+                "AI-Generated Virtual 3D Tours",
+                "Smart Contract Automation",
+                "Personalized Lifestyle Matching"
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-primary font-medium">
+                  <div className="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-accent rounded-full" />
+                  </div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-accent/20 rounded-[2rem] blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
+            <div className="relative aspect-square rounded-[2rem] overflow-hidden border border-accent/20 shadow-2xl">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="https://cdn.pixabay.com/video/2019/12/15/30200-380473759_large.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
+                <div className="text-white">
+                  <div className="text-2xl font-bold mb-2">Smart City Vision</div>
+                  <p className="text-sm text-gray-300">Integrating AI into every square foot of modern living spaces.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -353,10 +493,10 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   useEffect(() => {
     // Show logo after small delay
     setTimeout(() => setShowLogo(true), 500);
-    // Auto complete after 4.5 seconds (video duration approx)
+    // Auto complete after 3 seconds
     const timer = setTimeout(() => {
       onComplete();
-    }, 4500);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [onComplete]);
 
@@ -370,7 +510,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
           className="w-full h-full object-cover opacity-60"
         >
           {/* Using a cinematic gold/luxury abstract or city reveal video */}
-          <source src="https://cdn.pixabay.com/video/2019/04/20/22908-331622312_large.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2025/08/12/296958_large.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40" />
       </div>
@@ -399,7 +539,10 @@ const Index = () => {
   }
 
   return (
-    <Layout>
+    <Layout
+      headerBrandName={activeTab === 'real-estate' ? "Malak Al Reem" : "Saud Shehatha"}
+      headerBrandSubtitle={activeTab === 'real-estate' ? "Premium Real Estate" : "Construction LLC"}
+    >
       {/* The Touch Bar / Company Switcher - Positioned fixed below header or at top */}
       <div className="fixed top-24 left-0 right-0 z-40 flex justify-center pointer-events-none px-4">
         <div className="bg-black/90 backdrop-blur-md pointer-events-auto rounded-full p-1.5 border border-white/20 flex gap-2 shadow-2xl">
