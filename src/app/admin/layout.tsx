@@ -61,7 +61,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0A0C0F] text-white flex font-sans antialiased overflow-hidden">
+        <div className="min-h-screen bg-white text-black flex font-sans antialiased overflow-hidden">
             {/* Mobile Sidebar Toggle */}
             <button
                 className="lg:hidden fixed top-6 right-6 z-50 p-3 bg-primary/20 backdrop-blur-xl rounded-2xl border border-primary/20 text-primary"
@@ -73,7 +73,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             {/* Sidebar - Premium Dark Design */}
             <aside
                 className={`
-                    fixed lg:static inset-y-0 left-0 z-40 w-72 bg-[#0A0C0F] border-r border-white/5 transform transition-transform duration-500 ease-in-out
+                    fixed lg:static inset-y-0 left-0 z-40 w-72 bg-gray-50 border-r border-gray-200 transform transition-transform duration-500 ease-in-out
                     ${isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
                 `}
             >
@@ -84,8 +84,8 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
                             <Building2 className="text-black w-6 h-6" />
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-lg font-black tracking-tighter leading-none">ADMIN</span>
-                            <span className="text-[10px] text-white/40 font-bold tracking-widest uppercase mt-1">Command Center</span>
+                            <span className="text-lg font-black tracking-tighter leading-none text-black">ADMIN</span>
+                            <span className="text-[10px] text-gray-500 font-bold tracking-widest uppercase mt-1">Command Center</span>
                         </div>
                     </div>
 
@@ -100,8 +100,8 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
                                     className={`
                                         flex items-center justify-between px-5 py-4 rounded-2xl transition-all duration-300 group
                                         ${isActive
-                                            ? "bg-white/5 text-white ring-1 ring-white/10 shadow-[inner_0_0_20px_rgba(255,255,255,0.02)]"
-                                            : "text-white/50 hover:text-white hover:bg-white/5"}
+                                            ? "bg-white text-black ring-1 ring-gray-200 shadow-sm"
+                                            : "text-gray-600 hover:text-black hover:bg-gray-100"}
                                     `}
                                 >
                                     <div className="flex items-center gap-4">
@@ -122,12 +122,12 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
                     </nav>
 
                     {/* Bottom Section */}
-                    <div className="pt-6 space-y-2 border-t border-white/5">
+                    <div className="pt-6 space-y-2 border-t border-gray-200">
                         {bottomItems.map((item) => (
                             <Link
                                 key={item.path}
                                 href={item.path}
-                                className="flex items-center gap-4 px-5 py-4 rounded-2xl text-white/50 hover:text-white hover:bg-white/5 transition-all text-sm font-bold"
+                                className="flex items-center gap-4 px-5 py-4 rounded-2xl text-gray-600 hover:text-black hover:bg-gray-100 transition-all text-sm font-bold"
                             >
                                 <item.icon size={20} />
                                 {item.label}
@@ -135,7 +135,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
                         ))}
                         <Button
                             variant="ghost"
-                            className="w-full flex items-center justify-start gap-4 px-5 py-4 h-auto rounded-2xl text-red-400 hover:text-red-300 hover:bg-red-400/5 transition-all"
+                            className="w-full flex items-center justify-start gap-4 px-5 py-4 h-auto rounded-2xl text-red-600 hover:text-red-700 hover:bg-red-50 transition-all"
                             onClick={() => {
                                 logout();
                                 router.push("/admin/login");
@@ -149,10 +149,10 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             </aside>
 
             {/* Main Content Area */}
-            <main className="flex-1 overflow-auto bg-[#0A0C0F] relative">
+            <main className="flex-1 overflow-auto bg-white relative">
                 {/* Background Glows */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] -ml-40 -mb-40" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[120px] -mr-64 -mt-64" />
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/3 rounded-full blur-[100px] -ml-40 -mb-40" />
 
                 <div className="relative z-10 p-8 lg:p-12 min-h-screen">
                     <div className="max-w-[1600px] mx-auto">
