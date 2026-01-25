@@ -212,7 +212,7 @@ const ProjectsManager = () => {
                                         className="bg-white/5 border-white/10 rounded-2xl h-14 px-6"
                                         value={currentProject.location}
                                         onChange={(e) => setCurrentProject({ ...currentProject, location: e.target.value })}
-                                        placeholder="e.g. Aberdeen, UK"
+                                        placeholder="e.g. Dubai, UAE"
                                     />
                                 </div>
                             </div>

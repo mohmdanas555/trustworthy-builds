@@ -1,4 +1,4 @@
--- FIX AND SEED DATA FOR ABERDEEN CONSTRUCTION
+-- FIX AND SEED DATA FOR SAUD SHEHATHA CONSTRUCTION
 -- Run this in your Supabase SQL Editor
 
 -- 1. ENSURE COLUMNS EXIST (Fixing "does not exist" errors)
@@ -17,10 +17,10 @@ BEGIN
         ALTER TABLE public.company_details ADD COLUMN working_hours text DEFAULT 'Mon - Fri: 8:00 AM - 6:00 PM';
     END IF;
     IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='company_details' AND column_name='brand_name') THEN
-        ALTER TABLE public.company_details ADD COLUMN brand_name text DEFAULT 'Aberdeen';
+        ALTER TABLE public.company_details ADD COLUMN brand_name text DEFAULT 'Saud Shehatha';
     END IF;
     IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='company_details' AND column_name='brand_subtitle') THEN
-        ALTER TABLE public.company_details ADD COLUMN brand_subtitle text DEFAULT 'Building & Construction';
+        ALTER TABLE public.company_details ADD COLUMN brand_subtitle text DEFAULT 'Construction LLC';
     END IF;
 END $$;
 
@@ -97,7 +97,7 @@ VALUES (1, 'Saud Shehatha', 'Construction LLC', '(123) 456-7890', 'info@saudsheh
 -- INSERT SERVICES
 INSERT INTO public.services (title, icon, description, features)
 VALUES 
-('Architecture & Planning', 'Layout', 'Bespoke structural design and urban planning for modern Aberdeen developments.', ARRAY['Site Analysis', '3D Modeling', 'Permit Assistance']),
+('Architecture & Planning', 'Layout', 'Bespoke structural design and urban planning for modern Dubai developments.', ARRAY['Site Analysis', '3D Modeling', 'Permit Assistance']),
 ('Commercial Renovations', 'Building2', 'High-end office and retail transformations designed for business growth.', ARRAY['Office Fit-outs', 'Structural Upgrades', 'Interior Design']),
 ('New Home Construction', 'ShoppingBag', 'Building dream homes with traditional quality and modern sustainability.', ARRAY['Civil Works', 'Roofing', 'Plumbing & Electrical']),
 ('Kitchen & Bath Remodel', 'Wrench', 'Premium upgrades for your most important home spaces.', ARRAY['Custom Cabinetry', 'Luxury Fittings', 'Tiling']),
@@ -107,14 +107,14 @@ VALUES
 -- INSERT PROJECTS
 INSERT INTO public.projects (title, category, location, year, area, description, image)
 VALUES 
-('Riverside Plaza', 'Commercial', 'Aberdeen Harbor', '2023', '55,000 sq ft', 'State-of-the-art office complex.', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070'),
-('The Granite Villa', 'Residential', 'West End, Aberdeen', '2024', '14,000 sq ft', 'Luxury family home featuring local granite.', 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071'),
-('Shire Logistics Park', 'Industrial', 'Dyce', '2022', '150,000 sq ft', 'Massive distribution center.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070');
+('Dubai Riverside Plaza', 'Commercial', 'Dubai Harbor', '2023', '55,000 sq ft', 'State-of-the-art office complex.', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070'),
+('The Desert Villa', 'Residential', 'Palm Jumeirah, Dubai', '2024', '14,000 sq ft', 'Luxury family home featuring modern architecture.', 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071'),
+('Emirates Logistics Park', 'Industrial', 'Jebel Ali', '2022', '150,000 sq ft', 'Massive distribution center.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070');
 
 -- INSERT TEAM
 INSERT INTO public.team_members (name, role, image, bio, order_index)
 VALUES 
-('Thomas Miller', 'Chief Executive Officer', '/images/team_1.png', '15+ years experience in the Aberdeen market.', 1),
+('Thomas Miller', 'Chief Executive Officer', '/images/team_1.png', '15+ years experience in the Dubai market.', 1),
 ('Sarah Mitchell', 'Lead Architect', '/images/team_2.png', 'Specializing in sustainable modern infrastructure.', 2),
 ('Richard West', 'Operations Director', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070', 'Expert in site logistics and management.', 3),
 ('Emma Rogers', 'Principal Engineer', 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976', 'Dedicated to precision and safety excellence.', 4);
@@ -122,14 +122,14 @@ VALUES
 -- INSERT TESTIMONIALS
 INSERT INTO public.testimonials (client_name, role, content, image, rating)
 VALUES 
-('Alexander Grant', 'Property Developer', 'Aberdeen Construction delivered our project 2 months early. Their attention to structural detail and local building codes is unmatched.', 'https://i.pravatar.cc/150?img=68', 5),
+('Alexander Grant', 'Property Developer', 'Saud Shehatha Construction delivered our project 2 months early. Their attention to structural detail and local building codes is unmatched.', 'https://i.pravatar.cc/150?img=68', 5),
 ('Fiona Ross', 'Home Owner', 'The kitchen remodel surpassed all our expectations. Truly professional craftsmen who care about the final touch.', 'https://i.pravatar.cc/150?img=44', 5),
 ('David Sterling', 'CEO, Sterling Logistics', 'A reliable partner for industrial construction. Robust designs and clear communication throughout.', 'https://i.pravatar.cc/150?img=32', 5);
 
 -- INSERT FAQS
 INSERT INTO public.faqs (question, answer, order_index)
 VALUES 
-('Do you handle planning permission?', 'Yes, we have a dediated team that handles all local Aberdeen City and Shire planning applications from start to finish.', 1),
+('Do you handle planning permission?', 'Yes, we have a dediated team that handles all local Dubai planning applications from start to finish.', 1),
 ('What is your typical project timeline?', 'Timelines vary by scale, but a standard residential build typically ranges from 6 to 12 months including finishing.', 2),
 ('Are you fully insured for structural work?', 'Absolutely. We carry comprehensive public liability and professional indemnity insurance for all structural engineering works.', 3),
 ('Can we visit an active construction site?', 'We can arrange site visits for established clients following strict health and safety protocols.', 4);
