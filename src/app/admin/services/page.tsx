@@ -16,6 +16,7 @@ const emptyService = {
     icon: "Building2",
     description: "",
     features: [] as string[],
+    document_url: "",
 };
 
 const ServicesManager = () => {
@@ -192,6 +193,16 @@ const ServicesManager = () => {
                                 value={featuresInput}
                                 onChange={(e) => setFeaturesInput(e.target.value)}
                                 placeholder="Precision, Structural, Safety..."
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black uppercase tracking-widest text-white/30 ml-2">Technical Document URL (PDF)</label>
+                            <Input
+                                className="bg-white/5 border-white/10 rounded-2xl h-14 px-6"
+                                value={currentService.document_url}
+                                onChange={(e) => setCurrentService({ ...currentService, document_url: e.target.value })}
+                                placeholder="https://example.com/specs.pdf"
                             />
                         </div>
 

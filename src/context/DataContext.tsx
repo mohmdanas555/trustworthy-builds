@@ -20,6 +20,7 @@ export interface Service {
     title: string;
     description: string;
     features: string[];
+    document_url?: string;
 }
 
 export interface CompanyDetails {
@@ -45,6 +46,7 @@ export interface Quote {
     email: string;
     phone: string;
     message: string;
+    service_type?: string;
     status: 'pending' | 'reviewed' | 'contacted';
     created_at?: string;
 }
@@ -157,7 +159,12 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
         if (projectsData) setProjects(projectsData);
 
         const { data: servicesData } = await supabase.from('services').select('*').order('id');
-        if (servicesData) setServices(servicesData);
+        if (servicesData) {
+            setServices(servicesData.map((s: any) => ({
+                ...s,
+                document_url: s.document_url || ""
+            })));
+        }
 
         const { data: companyData } = await supabase.from('company_details').select('*').single();
         if (companyData) {

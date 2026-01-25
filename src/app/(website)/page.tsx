@@ -198,7 +198,11 @@ const Home = () => {
                   </div>
                   <h3 className="text-3xl font-black mb-8 uppercase tracking-[-0.02em] leading-tight">{service.title}</h3>
                   <p className="text-gray-400 text-base leading-relaxed mb-12 font-medium">{service.description}</p>
-                  <Link href="/services" className="font-black text-[11px] uppercase tracking-[0.3em] text-primary flex items-center gap-3 group-hover:gap-6 transition-all">
+                  <Link
+                    href={service.document_url || "/services"}
+                    target={service.document_url ? "_blank" : "_self"}
+                    className="font-black text-[11px] uppercase tracking-[0.3em] text-primary flex items-center gap-3 group-hover:gap-6 transition-all"
+                  >
                     Technical Specs <ArrowRight size={18} />
                   </Link>
                 </div>
