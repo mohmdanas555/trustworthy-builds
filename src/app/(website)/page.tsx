@@ -15,7 +15,7 @@ const Home = () => {
     projects, services, team, faqs, companyDetails
   } = useData();
 
-  const { brandName } = companyDetails;
+  const { brandName, brandSubtitle } = companyDetails;
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -63,7 +63,7 @@ const Home = () => {
               <div className="flex items-start gap-6 justify-start">
                 <div className="max-w-xl text-left">
                   <h2 className="text-primary font-black text-lg md:text-xl uppercase tracking-tighter mb-4 shadow-primary/20 drop-shadow-sm">
-                    {brandName}
+                    SAUD SHEHATHA CONSTRUCTION
                   </h2>
                   <p className="text-xs md:text-sm text-white/70 font-medium leading-relaxed border-l-4 border-primary/60 pl-8 italic">
                     A legacy construction firm defined by structural integrity. For over 15 years, we have translated complex architectural blueprints into enduring landmarks.

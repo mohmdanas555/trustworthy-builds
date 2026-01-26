@@ -48,14 +48,14 @@ const About = () => {
                         className="max-w-4xl"
                     >
                         <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5 rounded-full mb-8 font-black uppercase tracking-[0.2em] text-[10px]">
-                            About {brandName}
+                            About Saud Shehatha Construction
                         </Badge>
                         <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-10">
                             Building a Legacy of <br />
                             <span className="text-primary italic">Absolute Trust.</span>
                         </h1>
                         <p className="text-xl text-gray-400 font-light leading-relaxed max-w-2xl">
-                            With over {yearsExperience} of engineering excellence, {brandName} {brandSubtitle} has
+                            With over {yearsExperience} of engineering excellence, Saud Shehatha Construction has
                             become the regional benchmark for premium infrastructure and residential development.
                         </p>
                     </motion.div>
@@ -91,7 +91,7 @@ const About = () => {
 
                             <div className="space-y-6 text-gray-500 text-lg font-light leading-relaxed">
                                 <p>
-                                    Founded with a clear vision to redefine construction standards, {brandName} has evolved from a local firm into a powerhouse of engineering and design expertise.
+                                    Founded with a clear vision to redefine construction standards, Saud Shehatha Construction has evolved from a local firm into a powerhouse of engineering and design expertise.
                                 </p>
                                 <p>
                                     We combine traditional craftsmanship with futuristic technology to create spaces that inspire. Every project is a testament to our commitment to structural integrity and architectural beauty.

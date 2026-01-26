@@ -127,8 +127,8 @@ const defaultCompanyDetails: CompanyDetails = {
     instagram: "#",
     linkedin: "#",
     twitter: "#",
-    brandName: "SAUD SHEHATHA CONSTRUCTION LLC",
-    brandSubtitle: "",
+    brandName: "Saud Shehatha",
+    brandSubtitle: "Construction",
     yearsExperience: "14+",
     projectsCompleted: "200+",
     happyClients: "99%"

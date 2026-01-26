@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Saud Shehatha Construction LLC",
+  title: "Saud Shehatha Construction",
   description: "Building Your Dreams with Quality & Trust",
 };
 

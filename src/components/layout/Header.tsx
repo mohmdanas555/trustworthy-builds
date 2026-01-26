@@ -50,7 +50,7 @@ const Header = () => {
                             SAUD SHEHATHA
                         </span>
                         <span className={`font-bold text-[10px] tracking-wider transition-colors duration-500 ${isScrolled ? "text-black/60" : "text-white/60"}`}>
-                            CONSTRUCTION LLC
+                            CONSTRUCTION
                         </span>
                     </div>
                 </Link>

@@ -230,7 +230,7 @@ const Contact = () => {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Saudshehatha Office Location"
+                                    title="Saud Shehatha Construction Office Location"
                                 />
                             </div>
                         </div>
@@ -266,7 +266,7 @@ const Contact = () => {
                             },
                             {
                                 q: "Are you licensed and insured?",
-                                a: "Absolutely. Saudshehatha Construction LLC is fully licensed, bonded, and insured. We maintain all required certifications and carry comprehensive liability coverage.",
+                                a: "Absolutely. Saud Shehatha Construction is fully licensed, bonded, and insured. We maintain all required certifications and carry comprehensive liability coverage.",
                             },
                         ].map((faq, index) => (
                             <div

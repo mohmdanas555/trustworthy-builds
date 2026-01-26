@@ -26,11 +26,11 @@ const Footer = () => {
                                 <Building2 className="w-8 h-8" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-black text-3xl tracking-tighter uppercase leading-none">
-                                    {brandName.split(' ')[0]} <span className="text-primary italic">{brandName.split(' ')[1] || ""}</span>
+                                <span className="font-black text-2xl tracking-tighter uppercase leading-none">
+                                    SAUD SHEHATHA
                                 </span>
                                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500 leading-none mt-2">
-                                    {brandSubtitle}
+                                    CONSTRUCTION
                                 </span>
                             </div>
                         </Link>
@@ -79,7 +79,7 @@ const Footer = () => {
                     <div className="lg:col-span-2">
                         <h4 className="text-sm font-black mb-10 uppercase tracking-[0.2em] text-primary">Services</h4>
                         <ul className="space-y-5">
-                            {["Architecture", "Real Estate", "Civil Works", "Industrial", "Renovation"].map((link) => (
+                            {["Architecture", "Infrastructure", "Civil Works", "Industrial", "Renovation"].map((link) => (
                                 <li key={link}>
                                     <Link
                                         href="/services"

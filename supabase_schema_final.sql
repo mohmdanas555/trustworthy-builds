@@ -112,6 +112,6 @@ ON CONFLICT (id) DO NOTHING;
 INSERT INTO public.testimonials (client_name, role, content, image, rating)
 VALUES 
 ('James Wilson', 'SVP at Global Logistics', 'Saud Shehatha delivered our warehouse facility 2 months ahead of schedule. Their attention to detail in the steel structure was impeccable.', 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974', 5),
-('Al Reem Property Group', 'Developer', 'Working with their construction division has been a seamless experience. They understand the luxury market in Dubai perfectly.', 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070', 5)
+('Nexus Infrastructure Dubai', 'Developer', 'Working with their construction division has been a seamless experience. They understand the luxury market in Dubai perfectly.', 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070', 5)
 ON CONFLICT (id) DO NOTHING;
 

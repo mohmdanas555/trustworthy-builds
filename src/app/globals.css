@@ -107,3 +107,49 @@
     text-wrap: balance;
   }
 }
+
+/* Scoped Admin Theme Override */
+.admin-theme {
+  --background: 220 15% 5%;
+  --foreground: 0 0% 100%;
+  
+  --card: 220 15% 7%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 220 15% 7%;
+  --popover-foreground: 0 0% 100%;
+  
+  --primary: 84 81% 59%; /* Neon Green #A3E635 */
+  --primary-foreground: 220 15% 5%;
+  
+  --secondary: 220 15% 12%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 220 15% 12%;
+  --muted-foreground: 220 10% 60%;
+  
+  --accent: 84 81% 59%;
+  --accent-foreground: 220 15% 5%;
+  
+  --border: 220 15% 15%;
+  --input: 220 15% 15%;
+  --ring: 84 81% 59%;
+
+  --radius: 1.25rem;
+}
+
+.admin-theme input, .admin-theme textarea, .admin-theme select {
+  @apply bg-[#0D0F12] border-white/5 focus:border-[#A3E635]/30 focus:ring-[#A3E635]/20 transition-all text-white placeholder:text-white/20;
+}
+
+.admin-theme .card, .admin-theme [role="dialog"], .admin-theme table {
+  @apply bg-[#0D0F12] border-white/5;
+}
+
+.admin-theme label {
+  @apply text-white/40 font-bold uppercase tracking-widest text-[10px];
+}
+
+.admin-theme h2, .admin-theme h3 {
+  @apply text-white font-black;
+}
