@@ -51,7 +51,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
         { icon: Users, label: "Members", path: "/admin/team" },
         { icon: Calendar, label: "Calendar", path: "/admin/calendar" },
         { icon: MessageSquare, label: "Messages", path: "/admin/quotes", badge: pendingQuotes },
-        { icon: TrendingUp, label: "Statistics", path: "/admin" },
+        { icon: TrendingUp, label: "Statistics", path: "/admin/statistics" },
         { icon: Bell, label: "Notifications", path: "/admin", badge: 3 },
     ];
 
