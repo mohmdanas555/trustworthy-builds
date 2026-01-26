@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Pencil, Trash2, Camera, Linkedin, Twitter, X } from "lucide-react";
+import { Plus, Pencil, Trash2, Camera, Linkedin, Twitter, X, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -203,4 +203,6 @@ const TeamManager = () => {
             </Dialog>
         </div>
     );
-}
+};
+
+export default TeamManager;
