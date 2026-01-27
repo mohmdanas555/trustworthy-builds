@@ -168,13 +168,13 @@ const About = () => {
                         {[
                             {
                                 name: "Royal Arrow",
-                                description: "Specializing in precision logistics and strategic supply chain management for large-scale operations.",
-                                icon: Building2
+                                description: "State-of-the-art electrical engineering solutions, providing comprehensive wiring, power distribution, and industrial electrical infrastructure.",
+                                icon: Shield
                             },
                             {
                                 name: "Royal Wooden",
-                                description: "Premium architectural woodwork and bespoke interior solutions for luxury residential and commercial spaces.",
-                                icon: Building2
+                                description: "Premium architectural woodwork, specializing in luxury doors, bespoke cabinetry, and high-end wooden interiors for elite projects.",
+                                icon: Award
                             }
                         ].map((company, i) => (
                             <motion.div

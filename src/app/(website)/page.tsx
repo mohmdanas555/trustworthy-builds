@@ -245,6 +245,65 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 4.5 RELATED COMPANIES - Impactful Showcase */}
+      <section className="py-40 bg-gray-50 overflow-hidden" id="group">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-28 gap-12 border-b border-gray-200 pb-16">
+            <div className="space-y-6">
+              <Badge className="bg-primary text-black p-3 px-6 rounded-xl font-black text-[10px] uppercase tracking-[0.4em]">Our Enterprise Group</Badge>
+              <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">Related <br />Companies</h2>
+            </div>
+            <p className="text-gray-400 font-bold max-w-sm text-right text-lg italic leading-relaxed">"Unified by excellence, driven by specialized expertise."</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-16 relative">
+            {/* Decoration */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
+            {[
+              {
+                name: "Royal Arrow",
+                tagline: "Electrical Engineering",
+                description: "State-of-the-art electrical engineering solutions, providing comprehensive wiring, power distribution, and industrial electrical infrastructure.",
+                image: "/images/royal_arrow_electric.png"
+              },
+              {
+                name: "Royal Wooden",
+                tagline: "Artisan Woodworking",
+                description: "Premium architectural woodwork, specializing in luxury doors, bespoke cabinetry, and high-end wooden interiors for elite projects.",
+                image: "/images/royal_wooden_works.png"
+              }
+            ].map((company, i) => (
+              <motion.div
+                key={company.name}
+                whileHover={{ y: -20 }}
+                className="bg-white rounded-[5rem] overflow-hidden border border-gray-100 shadow-2xl group flex flex-col h-full relative z-10"
+              >
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img
+                    src={company.image}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                    alt={company.name}
+                  />
+                </div>
+                <div className="p-16 space-y-8 flex-1 flex flex-col">
+                  <div>
+                    <span className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">{company.tagline}</span>
+                    <h3 className="text-4xl font-black tracking-tighter uppercase mb-6 leading-none">{company.name}</h3>
+                    <p className="text-gray-400 text-lg leading-relaxed font-medium">{company.description}</p>
+                  </div>
+                  <div className="pt-8 mt-auto">
+                    <Button variant="outline" className="rounded-2xl border-2 border-black h-16 px-10 text-[11px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all group/btn">
+                      Explore Division <ArrowRight className="ml-4 w-4 h-4 group-hover/btn:translate-x-2 transition-transform" />
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 5. CTA SECTION - Industrial Refinement */}
       <section className="py-20 px-6">
         <div className="container mx-auto bg-black rounded-[6rem] p-24 md:p-40 text-center text-white space-y-16 relative overflow-hidden shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-white/10">
