@@ -73,23 +73,23 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Integrated Action Module - Luxury styling */}
+            {/* Integrated Action Module - Luxury styling - Reduced Size */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-16 w-full max-w-xl"
+              className="mt-10 w-full max-w-md"
             >
-              <div className="relative flex items-center p-3 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[30px] hover:border-primary/40 transition-all shadow-[0_40px_80px_-20px_rgba(0,0,0,0.7)] group">
-                <div className="flex-1 flex items-center px-6">
-                  <Mail className="text-white/20 w-5 h-5 mr-4 group-hover:text-primary transition-colors" />
+              <div className="relative flex items-center p-2 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[20px] hover:border-primary/40 transition-all shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] group">
+                <div className="flex-1 flex items-center px-4">
+                  <Mail className="text-white/20 w-4 h-4 mr-3 group-hover:text-primary transition-colors" />
                   <input
                     type="email"
-                    placeholder="Request a technical consultation..."
-                    className="bg-transparent border-none text-white placeholder:text-white/20 focus:ring-0 w-full font-bold h-14 text-sm text-left"
+                    placeholder="Technical consultation..."
+                    className="bg-transparent border-none text-white placeholder:text-white/20 focus:ring-0 w-full font-bold h-10 text-xs text-left"
                   />
                 </div>
-                <Button className="h-16 px-12 rounded-[22px] bg-primary text-black font-black hover:bg-white hover:shadow-[0_0_30px_rgba(180,255,0,0.4)] transition-all text-xs uppercase tracking-widest leading-none">
+                <Button className="h-11 px-8 rounded-[15px] bg-primary text-black font-black hover:bg-white transition-all text-[10px] uppercase tracking-widest leading-none">
                   Secure Access
                 </Button>
               </div>
