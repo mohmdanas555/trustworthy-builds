@@ -245,77 +245,19 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4.5 RELATED COMPANIES - Impactful Showcase */}
-      <section className="py-40 bg-gray-50 overflow-hidden" id="group">
+      {/* 4.5 OUR GROUP - Related Companies in Action */}
+      <section className="py-40 bg-white overflow-hidden" id="group">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-28 gap-12 border-b border-gray-200 pb-16">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-32 gap-12 border-b border-gray-200 pb-16">
             <div className="space-y-6">
               <Badge className="bg-primary text-black p-3 px-6 rounded-xl font-black text-sm uppercase tracking-[0.4em]">Our Enterprise Group</Badge>
               <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">Related <br />Companies</h2>
             </div>
-            <p className="text-gray-400 font-bold max-w-sm text-right text-lg italic leading-relaxed">"Unified by excellence, driven by specialized expertise."</p>
+            <p className="text-gray-400 font-bold max-w-sm text-right text-lg italic leading-relaxed">"A unified ecosystem of engineering excellence and artisanal mastery."</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 relative">
-            {/* Decoration */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-
-            {[
-              {
-                name: "Royal Arrow",
-                tagline: "Electrical Engineering",
-                description: "State-of-the-art electrical engineering solutions, providing comprehensive wiring, power distribution, and industrial electrical infrastructure.",
-                image: "/images/royal_arrow_electric.png"
-              },
-              {
-                name: "Royal Wooden",
-                tagline: "Artisan Woodworking",
-                description: "Premium architectural woodwork, specializing in luxury doors, bespoke cabinetry, and high-end wooden interiors for elite projects.",
-                image: "/images/royal_wooden_works.png"
-              }
-            ].map((company, i) => (
-              <motion.div
-                key={company.name}
-                whileHover={{ y: -20 }}
-                className="bg-white rounded-[5rem] overflow-hidden border border-gray-100 shadow-2xl group flex flex-col h-full relative z-10"
-              >
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img
-                    src={company.image}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
-                    alt={company.name}
-                  />
-                </div>
-                <div className="p-16 space-y-8 flex-1 flex flex-col">
-                  <div>
-                    <span className="text-primary font-black text-base uppercase tracking-[0.4em] mb-4 block">{company.tagline}</span>
-                    <h3 className="text-4xl font-black tracking-tighter uppercase mb-6 leading-none">{company.name}</h3>
-                    <p className="text-gray-400 text-lg leading-relaxed font-medium">{company.description}</p>
-                  </div>
-                  <div className="pt-8 mt-auto">
-                    <Button variant="outline" className="rounded-2xl border-2 border-black h-16 px-10 text-[11px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all group/btn">
-                      Explore Division <ArrowRight className="ml-4 w-4 h-4 group-hover/btn:translate-x-2 transition-transform" />
-                    </Button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4.7 WORKFORCE IN ACTION - Precision in Motion */}
-      <section className="py-40 bg-white" id="action">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mb-24">
-            <Badge className="bg-black text-white px-6 py-2 rounded-full uppercase tracking-[0.2em] text-sm mb-8">Workforce Excellence</Badge>
-            <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">
-              Precision <br />
-              <span className="text-primary italic">In Action.</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-2 gap-32">
+            {/* Royal Arrow */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -323,29 +265,36 @@ const Home = () => {
               className="group relative"
             >
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img src="/images/royal_arrow_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Arrow Electrician" />
+                <img src="/images/royal_arrow_worker.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Royal Arrow Electrical Division" />
               </div>
-              <div className="absolute -bottom-10 -right-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
-                <span className="text-primary font-black text-2xl uppercase tracking-[0.2em] block mb-4">Royal Arrow Division</span>
-                <h4 className="text-2xl font-black uppercase mb-4">Electrical Engineering</h4>
-                <p className="text-white/50 text-sm font-medium leading-relaxed">Our master electricians ensuring structural safety and high-voltage precision in every circuit.</p>
+              <div className="absolute -bottom-10 -right-10 bg-black text-white p-12 rounded-[3.5rem] max-w-sm shadow-2xl border-4 border-primary/20 z-10 transition-transform group-hover:-translate-y-4 duration-500">
+                <span className="text-primary font-black text-base uppercase tracking-[0.2em] block mb-4">Royal Arrow Division</span>
+                <h4 className="text-3xl font-black uppercase mb-4 tracking-tighter">Electrical Engineering</h4>
+                <p className="text-white/50 text-sm font-medium leading-relaxed mb-6">Expert electrical works encompassing high-voltage systems and professional maintenance for industrial builds.</p>
+                <Button variant="outline" className="w-full rounded-2xl border-primary/20 text-primary hover:bg-primary hover:text-black font-black uppercase text-[10px] tracking-widest h-14">
+                  Explore Division <ArrowRight className="ml-3 w-4 h-4" />
+                </Button>
               </div>
             </motion.div>
 
+            {/* Royal Wooden */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group relative mt-20 lg:mt-40"
+              className="group relative mt-40"
             >
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img src="/images/royal_wooden_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Wooden Carpenter" />
+                <img src="/images/royal_wooden_worker.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Royal Wooden Joinery Division" />
               </div>
-              <div className="absolute -bottom-10 -left-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
-                <span className="text-primary font-black text-2xl uppercase tracking-[0.2em] block mb-4">Royal Wooden Division</span>
-                <h4 className="text-2xl font-black uppercase mb-4">Artisan Joinery</h4>
-                <p className="text-white/50 text-sm font-medium leading-relaxed">Crafting legacy doors and bespoke cabinets with traditional mastery and futuristic design.</p>
+              <div className="absolute -bottom-10 -left-10 bg-black text-white p-12 rounded-[3.5rem] max-w-sm shadow-2xl border-4 border-primary/20 z-10 transition-transform group-hover:-translate-y-4 duration-500">
+                <span className="text-primary font-black text-base uppercase tracking-[0.2em] block mb-4">Royal Wooden Division</span>
+                <h4 className="text-3xl font-black uppercase mb-4 tracking-tighter">Artisan Joinery</h4>
+                <p className="text-white/50 text-sm font-medium leading-relaxed mb-6">Crafting legacy doors and bespoke cabinets with traditional mastery and futuristic design.</p>
+                <Button variant="outline" className="w-full rounded-2xl border-primary/20 text-primary hover:bg-primary hover:text-black font-black uppercase text-[10px] tracking-widest h-14">
+                  Explore Division <ArrowRight className="ml-3 w-4 h-4" />
+                </Button>
               </div>
             </motion.div>
           </div>
