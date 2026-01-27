@@ -171,14 +171,45 @@ const TeamManager = () => {
                                 />
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-white/30 ml-2">Digital Asset Link (Image)</label>
-                                <Input
-                                    className="bg-white/5 border-white/10 rounded-2xl h-14 px-6 focus:ring-[#A3E635]/20"
-                                    value={formData.image}
-                                    onChange={e => setFormData({ ...formData, image: e.target.value })}
-                                    placeholder="https://..."
-                                />
+                            <div className="space-y-4">
+                                <label className="text-[10px] font-black uppercase tracking-widest text-white/30 ml-2">Profile Image</label>
+                                <div className="flex items-center gap-6">
+                                    <div className="w-24 h-24 rounded-[2rem] bg-white/5 border border-white/10 overflow-hidden flex-shrink-0 relative group/preview">
+                                        {formData.image ? (
+                                            <img src={formData.image} className="w-full h-full object-cover" alt="Preview" />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center text-white/10">
+                                                <Camera size={32} />
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className="flex-1 space-y-3">
+                                        <div className="relative">
+                                            <input
+                                                type="file"
+                                                accept="image/*"
+                                                onChange={handleImageUpload}
+                                                className="hidden"
+                                                id="team-image-upload"
+                                            />
+                                            <Button
+                                                asChild
+                                                className="w-full bg-white/5 hover:bg-[#A3E635] hover:text-black border border-white/10 rounded-2xl h-14 font-black transition-all cursor-pointer"
+                                            >
+                                                <label htmlFor="team-image-upload" className="flex items-center justify-center gap-2 cursor-pointer">
+                                                    <Camera size={20} />
+                                                    Select from Gallery
+                                                </label>
+                                            </Button>
+                                        </div>
+                                        <Input
+                                            className="bg-white/5 border-white/10 rounded-xl h-10 px-4 text-[10px] focus:ring-[#A3E635]/20 opacity-50"
+                                            value={formData.image}
+                                            onChange={e => setFormData({ ...formData, image: e.target.value })}
+                                            placeholder="Or paste image URL..."
+                                        />
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="space-y-2">

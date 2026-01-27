@@ -236,14 +236,45 @@ const ProjectsManager = () => {
                                         placeholder="2024"
                                     />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase tracking-widest text-white/30 ml-2">Asset Image Link</label>
-                                    <Input
-                                        className="bg-white/5 border-white/10 rounded-2xl h-14 px-6"
-                                        value={currentProject.image}
-                                        onChange={(e) => setCurrentProject({ ...currentProject, image: e.target.value })}
-                                        placeholder="Paste image URL"
-                                    />
+                                <div className="space-y-4">
+                                    <label className="text-[10px] font-black uppercase tracking-widest text-white/30 ml-2">Project Asset Image</label>
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-24 h-24 rounded-[2rem] bg-white/5 border border-white/10 overflow-hidden flex-shrink-0 relative">
+                                            {currentProject.image ? (
+                                                <img src={currentProject.image} className="w-full h-full object-cover" alt="Preview" />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-white/10">
+                                                    <ImageIcon size={32} />
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="flex-1 space-y-3">
+                                            <div className="relative">
+                                                <input
+                                                    type="file"
+                                                    accept="image/*"
+                                                    onChange={handleImageUpload}
+                                                    className="hidden"
+                                                    id="project-image-upload"
+                                                />
+                                                <Button
+                                                    asChild
+                                                    className="w-full bg-white/5 hover:bg-primary hover:text-black border border-white/10 rounded-2xl h-14 font-black transition-all cursor-pointer"
+                                                >
+                                                    <label htmlFor="project-image-upload" className="flex items-center justify-center gap-2 cursor-pointer">
+                                                        <ImageIcon size={20} />
+                                                        Select from Gallery
+                                                    </label>
+                                                </Button>
+                                            </div>
+                                            <Input
+                                                className="bg-white/5 border-white/10 rounded-xl h-10 px-4 text-[10px] focus:ring-primary opacity-50"
+                                                value={currentProject.image}
+                                                onChange={(e) => setCurrentProject({ ...currentProject, image: e.target.value })}
+                                                placeholder="Or paste image URL..."
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
