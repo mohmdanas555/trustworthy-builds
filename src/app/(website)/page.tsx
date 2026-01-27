@@ -38,7 +38,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-10 flex items-center min-h-[100dvh] pt-32">
+        <div className="container mx-auto px-6 relative z-10 flex items-center min-h-[100dvh] pt-32">
           <div className="flex flex-col items-start text-left mr-auto max-w-[90rem]">
             {/* Headline - Precision Typography with adjusted size to avoid overlap */}
             <motion.div
@@ -47,7 +47,7 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="space-y-0 text-left"
             >
-              <h1 className="text-2xl md:text-4xl lg:text-[42px] font-black text-white leading-[1.1] tracking-[-0.04em] uppercase drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+              <h1 className="text-2xl md:text-4xl lg:text-[40px] font-black text-white leading-[1.1] tracking-[-0.04em] uppercase drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
                 Precision <br />
                 <span className="text-primary">Engineering</span> <br />
                 <span className="text-white/95">& Masterful Builds.</span>
