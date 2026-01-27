@@ -326,7 +326,7 @@ const Home = () => {
                 <img src="/images/royal_arrow_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Arrow Electrician" />
               </div>
               <div className="absolute -bottom-10 -right-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
-                <span className="text-primary font-black text-4xl uppercase tracking-tighter block mb-4">Royal Arrow Division</span>
+                <span className="text-primary font-black text-2xl uppercase tracking-[0.2em] block mb-4">Royal Arrow Division</span>
                 <h4 className="text-2xl font-black uppercase mb-4">Electrical Engineering</h4>
                 <p className="text-white/50 text-sm font-medium leading-relaxed">Our master electricians ensuring structural safety and high-voltage precision in every circuit.</p>
               </div>
@@ -343,7 +343,7 @@ const Home = () => {
                 <img src="/images/royal_wooden_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Wooden Carpenter" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
-                <span className="text-primary font-black text-4xl uppercase tracking-tighter block mb-4">Royal Wooden Division</span>
+                <span className="text-primary font-black text-2xl uppercase tracking-[0.2em] block mb-4">Royal Wooden Division</span>
                 <h4 className="text-2xl font-black uppercase mb-4">Artisan Joinery</h4>
                 <p className="text-white/50 text-sm font-medium leading-relaxed">Crafting legacy doors and bespoke cabinets with traditional mastery and futuristic design.</p>
               </div>

@@ -26,7 +26,7 @@ const Footer = () => {
                                 <Building2 className="w-8 h-8" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-black text-4xl tracking-tighter uppercase leading-none">
+                                <span className="font-black text-3xl tracking-tighter uppercase leading-none">
                                     SAUD SHEHATHA
                                 </span>
                                 <span className="text-xs font-bold uppercase tracking-[0.4em] text-gray-500 leading-none mt-2">
