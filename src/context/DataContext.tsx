@@ -120,7 +120,7 @@ export interface DataContextType {
 
 const defaultCompanyDetails: CompanyDetails = {
     phone: "0527267426",
-    email: "info@saudshehatha.com",
+    email: "Saudshehathaconstrion@gmail.com",
     address: "SMart Heights Tower, No: 707, Barsha Heights, Dubai",
     workingHours: "Sun - Thu: 9:00 AM - 5:30 PM",
     facebook: "#",

@@ -134,7 +134,7 @@ const Contact = () => {
                                             id="phone"
                                             name="phone"
                                             type="tel"
-                                            placeholder="052 726 7426"
+                                            placeholder="Your Phone Number"
                                             value={formData.phone}
                                             onChange={handleChange}
                                             className="h-12"
