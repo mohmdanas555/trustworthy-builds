@@ -95,33 +95,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Refined Social Proof - Bottom Left with premium spacing */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.7 }}
-              className="mt-20 flex flex-col items-start gap-8"
-            >
-              <div className="flex gap-16 items-center">
-                <div className="space-y-4">
-                  <div className="flex justify-start gap-1.5">
-                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={12} className="fill-primary text-primary drop-shadow-[0_0_8px_rgba(180,255,0,0.5)]" />)}
-                  </div>
-                  <p className="text-[11px] font-black text-white/50 uppercase tracking-[0.2em] flex items-center gap-3 justify-start">
-                    4.9 Trust <span className="w-1 h-1 bg-primary/40 rounded-full" /> Reviews.io
-                  </p>
-                </div>
-                <div className="w-[1px] h-12 bg-white/10" />
-                <div className="space-y-4">
-                  <div className="flex justify-start gap-1.5">
-                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={12} className="fill-emerald-400 text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]" />)}
-                  </div>
-                  <p className="text-[11px] font-black text-white/50 uppercase tracking-[0.2em] flex items-center gap-3 justify-start">
-                    4.8 Rated <span className="w-1 h-1 bg-emerald-400/40 rounded-full" /> Trustpilot
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+
           </div>
         </div>
 
