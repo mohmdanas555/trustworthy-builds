@@ -119,9 +119,9 @@ export interface DataContextType {
 }
 
 const defaultCompanyDetails: CompanyDetails = {
-    phone: "(123) 456-7890",
+    phone: "0527267426",
     email: "info@saudshehatha.com",
-    address: "Smart Heights Building, Barsha Heights, Dubai",
+    address: "SMart Heights Tower, No: 707, Barsha Heights, Dubai",
     workingHours: "Sun - Thu: 9:00 AM - 5:30 PM",
     facebook: "#",
     instagram: "#",
