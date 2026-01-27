@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* 1. HERO SECTION - High-End Premium Refinement */}
-      <section className="relative h-[100dvh] w-full flex items-center overflow-hidden bg-black">
+      <section className="relative h-[100dvh] w-full flex items-end overflow-hidden bg-black pb-24">
         {/* Cinematic Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -38,7 +38,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 flex items-center min-h-[100dvh] pt-32">
+        <div className="container mx-auto px-4 relative z-10 flex items-end">
           <div className="flex flex-col items-start text-left mr-auto max-w-[90rem]">
             {/* Headline - Precision Typography with adjusted size to avoid overlap */}
             <motion.div
