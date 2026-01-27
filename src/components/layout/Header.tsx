@@ -35,7 +35,7 @@ const Header = () => {
                 ? "bg-white/80 backdrop-blur-lg shadow-xl py-3"
                 : "bg-transparent py-5"}`}
         >
-            <div className="container mx-auto px-6 flex items-center justify-between">
+            <div className="container mx-auto px-4 flex items-center justify-between">
                 {/* Logo - Matching Figma Logoipsum style */}
                 <Link href="/" className="flex items-center gap-2 group">
                     <div className="bg-white p-1 rounded-full">

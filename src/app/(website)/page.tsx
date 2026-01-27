@@ -38,7 +38,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 flex items-center min-h-[100dvh] pt-32">
+        <div className="container mx-auto px-4 relative z-10 flex items-center min-h-[100dvh] pt-32">
           <div className="flex flex-col items-start text-left mr-auto max-w-[90rem]">
             {/* Headline - Precision Typography with adjusted size to avoid overlap */}
             <motion.div
@@ -47,7 +47,7 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="space-y-0 text-left"
             >
-              <h1 className="text-2xl md:text-4xl lg:text-[40px] font-black text-white leading-[1.1] tracking-[-0.04em] uppercase drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+              <h1 className="text-xl md:text-2xl lg:text-[24px] font-black text-white leading-[1.1] tracking-[-0.04em] uppercase drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
                 Precision <br />
                 <span className="text-primary">Engineering</span> <br />
                 <span className="text-white/95">& Masterful Builds.</span>
@@ -59,14 +59,14 @@ const Home = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-12 group"
+              className="mt-8 group"
             >
               <div className="flex items-start gap-6 justify-start">
                 <div className="max-w-xl text-left">
-                  <h2 className="text-primary font-black text-lg md:text-xl uppercase tracking-tighter mb-4 shadow-primary/20 drop-shadow-sm">
+                  <h2 className="text-primary font-black text-xs md:text-sm uppercase tracking-tighter mb-2 shadow-primary/20 drop-shadow-sm">
                     SAUD SHEHATHA CONSTRUCTION
                   </h2>
-                  <p className="text-xs md:text-sm text-white/70 font-medium leading-relaxed border-l-4 border-primary/60 pl-8 italic">
+                  <p className="text-[10px] md:text-[11px] text-white/70 font-medium leading-relaxed border-l border-primary/60 pl-3 italic">
                     A legacy construction firm defined by structural integrity. For over 15 years, we have translated complex architectural blueprints into enduring landmarks.
                   </p>
                 </div>
