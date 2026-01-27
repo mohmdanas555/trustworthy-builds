@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
 
                     {/* Brand Section */}
-                    <div className="lg:col-span-4 space-y-10">
+                    <div className="lg:col-span-3 space-y-10">
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="bg-primary p-2.5 rounded-2xl text-black group-hover:rotate-6 transition-transform duration-500 shadow-[0_0_30px_rgba(252,211,77,0.3)]">
                                 <Building2 className="w-8 h-8" />
@@ -34,7 +34,7 @@ const Footer = () => {
                                 </span>
                             </div>
                         </Link>
-                        <p className="text-gray-400 text-lg leading-relaxed font-light max-w-sm">
+                        <p className="text-gray-400 text-sm leading-relaxed font-light max-w-sm">
                             Building excellence across the region for over 14 years. We specialize in luxury residential, commercial, and industrial infrastructure.
                         </p>
                         <div className="flex gap-4">
@@ -48,16 +48,13 @@ const Footer = () => {
                                     key={i}
                                     href={social.href}
                                     aria-label={social.label}
-                                    className="w-12 h-12 rounded-2xl border border-white/5 bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-all duration-500 group shadow-lg"
+                                    className="w-10 h-10 rounded-xl border border-white/5 bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black hover:border-primary transition-all duration-500 group"
                                 >
-                                    <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                    <social.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                                 </a>
                             ))}
                         </div>
                     </div>
-
-                    {/* Links Grid */}
-                    <div className="lg:col-span-1" /> {/* Spacer */}
 
                     <div className="lg:col-span-2">
                         <h4 className="text-sm font-black mb-10 uppercase tracking-[0.2em] text-primary">Explore</h4>
@@ -87,6 +84,23 @@ const Footer = () => {
                                     >
                                         <ChevronRight className="w-3 h-3 text-primary opacity-0 group-hover:opacity-100 transition-all -ml-2 group-hover:ml-0" />
                                         {link}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="lg:col-span-2">
+                        <h4 className="text-sm font-black mb-10 uppercase tracking-[0.2em] text-primary">Related Companies</h4>
+                        <ul className="space-y-5">
+                            {["Royal Arrow", "Royal Wooden"].map((company) => (
+                                <li key={company}>
+                                    <Link
+                                        href="#"
+                                        className="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 group text-sm font-bold"
+                                    >
+                                        <ChevronRight className="w-3 h-3 text-primary opacity-0 group-hover:opacity-100 transition-all -ml-2 group-hover:ml-0" />
+                                        {company}
                                     </Link>
                                 </li>
                             ))}

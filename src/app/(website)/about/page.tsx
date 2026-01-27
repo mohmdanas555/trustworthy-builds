@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Target, Eye, Shield, Clock, Award, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, Target, Eye, Shield, Clock, Award, Users, CheckCircle, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useData } from "@/context/DataContext";
@@ -147,7 +147,64 @@ const About = () => {
                 </div>
             </section>
 
-            {/* 4. CTA - Premium Footer CTA */}
+            {/* 4. RELATED COMPANIES - Industrial Logo Cloud Style */}
+            <section className="py-32 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-8">
+                        <div className="space-y-4">
+                            <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1 rounded-full font-black uppercase tracking-[0.2em] text-[10px]">
+                                Our Group
+                            </Badge>
+                            <h2 className="text-4xl md:text-5xl font-black text-black tracking-tighter uppercase">
+                                Related Companies
+                            </h2>
+                        </div>
+                        <p className="text-gray-400 font-medium max-w-sm text-right leading-relaxed italic">
+                            "Synergizing expertise across diverse industries to deliver comprehensive solutions."
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12">
+                        {[
+                            {
+                                name: "Royal Arrow",
+                                description: "Specializing in precision logistics and strategic supply chain management for large-scale operations.",
+                                icon: Building2
+                            },
+                            {
+                                name: "Royal Wooden",
+                                description: "Premium architectural woodwork and bespoke interior solutions for luxury residential and commercial spaces.",
+                                icon: Building2
+                            }
+                        ].map((company, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="group relative p-12 bg-gray-50 rounded-[4rem] border border-gray-100 hover:border-primary/30 transition-all duration-500 overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                                    <company.icon size={120} />
+                                </div>
+                                <div className="relative z-10 space-y-6">
+                                    <h3 className="text-3xl font-black text-black tracking-tighter uppercase">{company.name}</h3>
+                                    <p className="text-gray-500 text-lg font-light leading-relaxed max-w-md">
+                                        {company.description}
+                                    </p>
+                                    <div className="pt-4">
+                                        <button className="flex items-center gap-3 text-primary font-black uppercase tracking-widest text-xs group-hover:gap-5 transition-all">
+                                            Visit Website <ArrowRight size={16} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 5. CTA - Premium Footer CTA */}
             <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="bg-[#0A0D10] text-white rounded-[4rem] p-16 md:p-24 text-center relative overflow-hidden group shadow-2xl">
