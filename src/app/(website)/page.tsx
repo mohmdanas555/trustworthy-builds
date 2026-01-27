@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* 1. HERO SECTION - High-End Premium Refinement */}
-      <section className="relative h-[100dvh] w-full flex items-end overflow-hidden bg-black pb-24">
+      <section className="relative h-[100dvh] w-full flex items-end overflow-hidden bg-black pb-6">
         {/* Cinematic Video Background */}
         <div className="absolute inset-0 z-0">
           <video
