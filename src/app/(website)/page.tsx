@@ -304,6 +304,54 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 4.7 WORKFORCE IN ACTION - Precision in Motion */}
+      <section className="py-40 bg-white" id="action">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mb-24">
+            <Badge className="bg-black text-white px-6 py-2 rounded-full uppercase tracking-[0.2em] text-[10px] mb-8">Workforce Excellence</Badge>
+            <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">
+              Precision <br />
+              <span className="text-primary italic">In Action.</span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-20">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
+                <img src="/images/royal_arrow_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Arrow Electrician" />
+              </div>
+              <div className="absolute -bottom-10 -right-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
+                <span className="text-primary font-black text-[10px] uppercase tracking-widest block mb-4">Royal Arrow Division</span>
+                <h4 className="text-2xl font-black uppercase mb-4">Electrical Engineering</h4>
+                <p className="text-white/50 text-sm font-medium leading-relaxed">Our master electricians ensuring structural safety and high-voltage precision in every circuit.</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group relative mt-20 lg:mt-40"
+            >
+              <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
+                <img src="/images/royal_wooden_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Wooden Carpenter" />
+              </div>
+              <div className="absolute -bottom-10 -left-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
+                <span className="text-primary font-black text-[10px] uppercase tracking-widest block mb-4">Royal Wooden Division</span>
+                <h4 className="text-2xl font-black uppercase mb-4">Artisan Joinery</h4>
+                <p className="text-white/50 text-sm font-medium leading-relaxed">Crafting legacy doors and bespoke cabinets with traditional mastery and futuristic design.</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. CTA SECTION - Industrial Refinement */}
       <section className="py-20 px-6">
         <div className="container mx-auto bg-black rounded-[6rem] p-24 md:p-40 text-center text-white space-y-16 relative overflow-hidden shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-white/10">
