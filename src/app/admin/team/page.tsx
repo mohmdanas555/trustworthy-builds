@@ -94,11 +94,11 @@ const TeamManager = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F] via-transparent to-transparent opacity-60" />
 
                             {/* Action Overlay */}
-                            <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <Button size="icon" className="h-9 w-9 bg-black/40 backdrop-blur-md hover:bg-[#A3E635] hover:text-black rounded-xl border border-white/10" onClick={() => handleOpenDialog(member)}>
+                            <div className="absolute top-4 right-4 flex gap-2 transition-opacity z-20">
+                                <Button size="icon" className="h-9 w-9 bg-black/60 backdrop-blur-md hover:bg-[#A3E635] hover:text-black rounded-xl border border-white/20 shadow-xl" onClick={() => handleOpenDialog(member)}>
                                     <Pencil className="h-4 w-4" />
                                 </Button>
-                                <Button size="icon" className="h-9 w-9 bg-black/40 backdrop-blur-md hover:bg-red-500 rounded-xl border border-white/10" onClick={() => handleDelete(member.id)}>
+                                <Button size="icon" className="h-9 w-9 bg-black/60 backdrop-blur-md hover:bg-red-500 rounded-xl border border-white/20 shadow-xl" onClick={() => handleDelete(member.id)}>
                                     <Trash2 className="h-4 w-4" />
                                 </Button>
                             </div>

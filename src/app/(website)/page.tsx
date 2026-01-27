@@ -6,13 +6,14 @@ import { Mail, Star, Building2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useData } from "@/context/DataContext";
 import { Badge } from "@/components/ui/badge";
+import { Pencil } from "lucide-react";
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger
 } from "@/components/ui/accordion";
 
 const Home = () => {
   const {
-    projects, services, team, faqs, companyDetails
+    projects, services, team, faqs, companyDetails, isAdmin
   } = useData();
 
   const { brandName, brandSubtitle } = companyDetails;
@@ -238,7 +239,17 @@ const Home = () => {
               </div>
               <div>
                 <h4 className="text-2xl font-black tracking-tighter mb-2">{member.name}</h4>
-                <p className="text-primary font-black text-[11px] uppercase tracking-[0.3em]">{member.role}</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-primary font-black text-[11px] uppercase tracking-[0.3em]">{member.role}</p>
+                  {isAdmin && (
+                    <Link
+                      href="/admin/team"
+                      className="flex items-center gap-2 text-black/40 hover:text-black transition-colors text-[10px] font-black uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full"
+                    >
+                      <Pencil size={10} /> Edit
+                    </Link>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
