@@ -47,7 +47,7 @@ const About = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-4xl"
                     >
-                        <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5 rounded-full mb-8 font-black uppercase tracking-[0.2em] text-[10px]">
+                        <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5 rounded-full mb-8 font-black uppercase tracking-[0.2em] text-sm">
                             About Saud Shehatha Construction
                         </Badge>
                         <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-10">
@@ -82,7 +82,7 @@ const About = () => {
 
                         <div className="lg:col-span-6 space-y-10 order-1 lg:order-2">
                             <div className="space-y-6">
-                                <Badge variant="outline" className="text-primary border-primary px-5 py-2 uppercase font-black tracking-[0.2em] text-[10px] rounded-full">Our Story</Badge>
+                                <Badge variant="outline" className="text-primary border-primary px-5 py-2 uppercase font-black tracking-[0.2em] text-sm rounded-full">Our Story</Badge>
                                 <h2 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tighter">
                                     A Dedication to <br />
                                     <span className="text-gray-300 italic">Quality Craftsmanship.</span>
@@ -107,7 +107,7 @@ const About = () => {
                                 ].map((stat, i) => (
                                     <div key={i} className="flex gap-4 items-center">
                                         <div className="text-4xl font-black text-black tracking-tighter">{stat.value}</div>
-                                        <div className="text-[10px] font-black uppercase tracking-widest text-primary leading-tight">{stat.label}</div>
+                                        <div className="text-sm font-black uppercase tracking-widest text-primary leading-tight">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>
@@ -120,7 +120,7 @@ const About = () => {
             <section className="py-32 bg-[#F8FAFC]">
                 <div className="container mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-24 space-y-6">
-                        <Badge className="bg-black text-white px-6 py-2 rounded-full uppercase tracking-[0.2em] text-[10px] border-none">Our Principles</Badge>
+                        <Badge className="bg-black text-white px-6 py-2 rounded-full uppercase tracking-[0.2em] text-sm border-none">Our Principles</Badge>
                         <h2 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tighter">
                             What Drives Our Excellence
                         </h2>
@@ -152,7 +152,7 @@ const About = () => {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-8">
                         <div className="space-y-4">
-                            <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1 rounded-full font-black uppercase tracking-[0.2em] text-[10px]">
+                            <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1 rounded-full font-black uppercase tracking-[0.2em] text-sm">
                                 Our Group
                             </Badge>
                             <h2 className="text-4xl md:text-5xl font-black text-black tracking-tighter uppercase">

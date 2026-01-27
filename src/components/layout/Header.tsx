@@ -46,10 +46,10 @@ const Header = () => {
                         </svg>
                     </div>
                     <div className="flex flex-col leading-none">
-                        <span className={`font-black text-xl tracking-tighter transition-colors duration-500 ${isScrolled ? "text-black" : "text-white"}`}>
+                        <span className={`font-black text-3xl tracking-tighter transition-colors duration-500 ${isScrolled ? "text-black" : "text-white"}`}>
                             SAUD SHEHATHA
                         </span>
-                        <span className={`font-bold text-[10px] tracking-wider transition-colors duration-500 ${isScrolled ? "text-black/60" : "text-white/60"}`}>
+                        <span className={`font-bold text-sm tracking-[0.3em] transition-colors duration-500 ${isScrolled ? "text-black/60" : "text-white/60"}`}>
                             CONSTRUCTION
                         </span>
                     </div>

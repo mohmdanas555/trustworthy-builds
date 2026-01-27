@@ -250,7 +250,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-end justify-between mb-28 gap-12 border-b border-gray-200 pb-16">
             <div className="space-y-6">
-              <Badge className="bg-primary text-black p-3 px-6 rounded-xl font-black text-[10px] uppercase tracking-[0.4em]">Our Enterprise Group</Badge>
+              <Badge className="bg-primary text-black p-3 px-6 rounded-xl font-black text-sm uppercase tracking-[0.4em]">Our Enterprise Group</Badge>
               <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">Related <br />Companies</h2>
             </div>
             <p className="text-gray-400 font-bold max-w-sm text-right text-lg italic leading-relaxed">"Unified by excellence, driven by specialized expertise."</p>
@@ -288,7 +288,7 @@ const Home = () => {
                 </div>
                 <div className="p-16 space-y-8 flex-1 flex flex-col">
                   <div>
-                    <span className="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">{company.tagline}</span>
+                    <span className="text-primary font-black text-base uppercase tracking-[0.4em] mb-4 block">{company.tagline}</span>
                     <h3 className="text-4xl font-black tracking-tighter uppercase mb-6 leading-none">{company.name}</h3>
                     <p className="text-gray-400 text-lg leading-relaxed font-medium">{company.description}</p>
                   </div>
@@ -308,7 +308,7 @@ const Home = () => {
       <section className="py-40 bg-white" id="action">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mb-24">
-            <Badge className="bg-black text-white px-6 py-2 rounded-full uppercase tracking-[0.2em] text-[10px] mb-8">Workforce Excellence</Badge>
+            <Badge className="bg-black text-white px-6 py-2 rounded-full uppercase tracking-[0.2em] text-sm mb-8">Workforce Excellence</Badge>
             <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">
               Precision <br />
               <span className="text-primary italic">In Action.</span>
@@ -326,7 +326,7 @@ const Home = () => {
                 <img src="/images/royal_arrow_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Arrow Electrician" />
               </div>
               <div className="absolute -bottom-10 -right-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
-                <span className="text-primary font-black text-[10px] uppercase tracking-widest block mb-4">Royal Arrow Division</span>
+                <span className="text-primary font-black text-4xl uppercase tracking-tighter block mb-4">Royal Arrow Division</span>
                 <h4 className="text-2xl font-black uppercase mb-4">Electrical Engineering</h4>
                 <p className="text-white/50 text-sm font-medium leading-relaxed">Our master electricians ensuring structural safety and high-voltage precision in every circuit.</p>
               </div>
@@ -343,7 +343,7 @@ const Home = () => {
                 <img src="/images/royal_wooden_worker.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Royal Wooden Carpenter" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-black text-white p-12 rounded-[3.5rem] max-w-xs shadow-2xl border-4 border-primary/20">
-                <span className="text-primary font-black text-[10px] uppercase tracking-widest block mb-4">Royal Wooden Division</span>
+                <span className="text-primary font-black text-4xl uppercase tracking-tighter block mb-4">Royal Wooden Division</span>
                 <h4 className="text-2xl font-black uppercase mb-4">Artisan Joinery</h4>
                 <p className="text-white/50 text-sm font-medium leading-relaxed">Crafting legacy doors and bespoke cabinets with traditional mastery and futuristic design.</p>
               </div>
