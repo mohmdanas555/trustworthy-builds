@@ -47,7 +47,7 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="space-y-0 text-left"
             >
-              <h1 className="text-xl md:text-2xl lg:text-[24px] font-black text-white leading-[1.1] tracking-[-0.04em] uppercase drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-[-0.04em] uppercase drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
                 Precision <br />
                 <span className="text-primary">Engineering</span> <br />
                 <span className="text-white/95">& Masterful Builds.</span>
@@ -103,8 +103,8 @@ const Home = () => {
       </section>
 
       {/* 2. OVERVIEW SECTION */}
-      <section className="py-40 bg-white" id="about">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-32 items-center">
+      <section className="py-20 md:py-40 bg-white" id="about">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-32 items-center">
           <div className="relative group">
             <div className="absolute -top-20 -left-20 w-80 h-80 bg-primary/5 rounded-full blur-[120px] group-hover:bg-primary/10 transition-colors" />
             <div className="grid grid-cols-2 gap-8 relative z-10 p-4">
@@ -123,7 +123,7 @@ const Home = () => {
               <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
               <span className="font-black text-[11px] uppercase tracking-[0.3em] text-black/60">Architectural Heritage</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85]">
+            <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.95] md:leading-[0.85]">
               Engineering Your <br />
               <span className="text-gray-200">Vision Into Reality.</span>
             </h2>
@@ -140,8 +140,8 @@ const Home = () => {
                 <div className="text-[11px] font-black text-primary uppercase mt-4 tracking-widest">Build Assets</div>
               </div>
             </div>
-            <Button size="lg" className="rounded-2xl h-20 px-16 font-black uppercase text-[12px] tracking-[0.3em] bg-black text-white hover:bg-primary hover:text-black transition-all shadow-2xl group" asChild>
-              <Link href="/about" className="flex items-center gap-4">
+            <Button size="lg" className="rounded-2xl h-16 md:h-20 px-8 md:px-16 font-black uppercase text-[12px] tracking-[0.3em] bg-black text-white hover:bg-primary hover:text-black transition-all shadow-2xl group w-full md:w-auto" asChild>
+              <Link href="/about" className="flex items-center justify-center gap-4">
                 Strategic Analysis
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-3 transition-transform" />
               </Link>
@@ -151,12 +151,12 @@ const Home = () => {
       </section>
 
       {/* 3. SERVICES SECTION - High Fidelity Cards */}
-      <section className="py-40 bg-gray-50" id="services">
+      <section className="py-20 md:py-40 bg-gray-50" id="services">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-28 gap-8 border-b border-gray-200 pb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-28 gap-8 border-b border-gray-200 pb-16">
             <div className="space-y-6">
               <Badge className="bg-black text-white p-3 px-6 rounded-xl font-black text-[10px] uppercase tracking-[0.4em]">Capability Matrix</Badge>
-              <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">Core Engineering</h2>
+              <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none">Core Engineering</h2>
             </div>
             <p className="text-gray-400 font-bold max-w-sm text-right text-lg italic leading-relaxed">"Deploying industrial-grade expertise for every blueprint we touch."</p>
           </div>
@@ -165,7 +165,7 @@ const Home = () => {
               <motion.div
                 key={service.id}
                 whileHover={{ y: -25 }}
-                className="bg-white p-14 rounded-[5rem] border border-gray-100 hover:border-primary/40 transition-all group shadow-sm hover:shadow-[0_60px_100px_-30px_rgba(0,0,0,0.1)] relative overflow-hidden"
+                className="bg-white p-8 md:p-14 rounded-[2.5rem] md:rounded-[5rem] border border-gray-100 hover:border-primary/40 transition-all group shadow-sm hover:shadow-[0_60px_100px_-30px_rgba(0,0,0,0.1)] relative overflow-hidden"
               >
                 <div className="relative z-10">
                   <div className="w-20 h-20 bg-gray-50 rounded-3xl flex items-center justify-center mb-12 group-hover:bg-primary group-hover:text-black transition-all shadow-inner border border-gray-100">
@@ -191,10 +191,10 @@ const Home = () => {
       </section>
 
       {/* 4. TEAM SECTION */}
-      <section className="py-40 bg-white" id="team">
-        <div className="container mx-auto px-6 flex flex-col items-center text-center mb-32">
+      <section className="py-20 md:py-40 bg-white" id="team">
+        <div className="container mx-auto px-6 flex flex-col items-center text-center mb-16 md:mb-32">
           <div className="w-1 h-20 bg-primary/20 mb-10" />
-          <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase mb-6">The Engineers</h2>
+          <h2 className="text-4xl md:text-8xl font-black tracking-tighter uppercase mb-6">The Engineers</h2>
           <p className="text-gray-400 font-bold uppercase tracking-[0.4em] text-xs">Strategic Leadership Protocol</p>
         </div>
         <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 lg:gap-16">
@@ -231,17 +231,17 @@ const Home = () => {
       </section>
 
       {/* 4.5 OUR GROUP - Related Companies in Action */}
-      <section className="py-40 bg-white overflow-hidden" id="group">
+      <section className="py-20 md:py-40 bg-white overflow-hidden" id="group">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-32 gap-12 border-b border-gray-200 pb-16">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-20 md:mb-32 gap-12 border-b border-gray-200 pb-16">
             <div className="space-y-6">
               <Badge className="bg-primary text-black p-3 px-6 rounded-xl font-black text-sm uppercase tracking-[0.4em]">Our Enterprise Group</Badge>
-              <h2 className="text-6xl md:text-7xl font-black tracking-tighter uppercase leading-none">Related <br />Companies</h2>
+              <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none">Related <br />Companies</h2>
             </div>
             <p className="text-gray-400 font-bold max-w-sm text-right text-lg italic leading-relaxed">"A unified ecosystem of engineering excellence and artisanal mastery."</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-32">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-32">
             {/* Royal Arrow */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -252,9 +252,9 @@ const Home = () => {
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
                 <img src="/images/royal_arrow_worker.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Royal Arrow Electrical Division" />
               </div>
-              <div className="absolute -bottom-10 -right-10 bg-black text-white p-12 rounded-[3.5rem] max-w-sm shadow-2xl border-4 border-primary/20 z-10 transition-transform group-hover:-translate-y-4 duration-500">
+              <div className="relative mt-[-2rem] md:mt-0 md:absolute md:-bottom-10 md:-right-10 bg-black text-white p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] w-full max-w-sm shadow-2xl border-4 border-primary/20 z-10 transition-transform group-hover:-translate-y-4 duration-500 mx-auto">
                 <span className="text-primary font-black text-base uppercase tracking-[0.2em] block mb-4">Royal Arrow Division</span>
-                <h4 className="text-3xl font-black uppercase mb-4 tracking-tighter">Electrical Engineering</h4>
+                <h4 className="text-2xl md:text-3xl font-black uppercase mb-4 tracking-tighter">Electrical Engineering</h4>
                 <p className="text-white/50 text-sm font-medium leading-relaxed mb-6">Expert electrical works encompassing high-voltage systems and professional maintenance for industrial builds.</p>
                 <Button variant="outline" className="w-full rounded-2xl border-primary/20 text-primary hover:bg-primary hover:text-black font-black uppercase text-[10px] tracking-widest h-14">
                   Explore Division <ArrowRight className="ml-3 w-4 h-4" />
@@ -268,14 +268,15 @@ const Home = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group relative mt-40"
+              transition={{ delay: 0.2 }}
+              className="group relative md:mt-40"
             >
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
                 <img src="/images/royal_wooden_worker.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Royal Wooden Joinery Division" />
               </div>
-              <div className="absolute -bottom-10 -left-10 bg-black text-white p-12 rounded-[3.5rem] max-w-sm shadow-2xl border-4 border-primary/20 z-10 transition-transform group-hover:-translate-y-4 duration-500">
+              <div className="relative mt-[-2rem] md:mt-0 md:absolute md:-bottom-10 md:-left-10 bg-black text-white p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] w-full max-w-sm shadow-2xl border-4 border-primary/20 z-10 transition-transform group-hover:-translate-y-4 duration-500 mx-auto">
                 <span className="text-primary font-black text-base uppercase tracking-[0.2em] block mb-4">Royal Wooden Division</span>
-                <h4 className="text-3xl font-black uppercase mb-4 tracking-tighter">Artisan Joinery</h4>
+                <h4 className="text-2xl md:text-3xl font-black uppercase mb-4 tracking-tighter">Artisan Joinery</h4>
                 <p className="text-white/50 text-sm font-medium leading-relaxed mb-6">Crafting legacy doors and bespoke cabinets with traditional mastery and futuristic design.</p>
                 <Button variant="outline" className="w-full rounded-2xl border-primary/20 text-primary hover:bg-primary hover:text-black font-black uppercase text-[10px] tracking-widest h-14">
                   Explore Division <ArrowRight className="ml-3 w-4 h-4" />
@@ -288,16 +289,16 @@ const Home = () => {
 
       {/* 5. CTA SECTION - Industrial Refinement */}
       <section className="py-20 px-6">
-        <div className="container mx-auto bg-black rounded-[6rem] p-24 md:p-40 text-center text-white space-y-16 relative overflow-hidden shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-white/10">
+        <div className="container mx-auto bg-black rounded-[3rem] md:rounded-[6rem] p-8 md:p-40 text-center text-white space-y-16 relative overflow-hidden shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-white/10">
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,white_0%,transparent_70%)] opacity-30" />
           </div>
-          <h2 className="text-6xl md:text-[10rem] font-black tracking-tighter uppercase leading-[0.8] relative z-10 text-white/95">
+          <h2 className="text-4xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter uppercase leading-[0.9] md:leading-[0.8] relative z-10 text-white/95">
             Build The <br /> Future.
           </h2>
-          <p className="text-white/30 max-w-2xl mx-auto font-bold text-xl uppercase tracking-[0.5em] leading-relaxed relative z-10 italic">"Blueprints built with precision."</p>
+          <p className="text-white/30 max-w-2xl mx-auto font-bold text-sm md:text-xl uppercase tracking-[0.5em] leading-relaxed relative z-10 italic">"Blueprints built with precision."</p>
           <div className="relative z-10 pt-10">
-            <Button className="rounded-3xl bg-primary text-black h-24 px-24 text-[13px] font-black uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl hover:scale-110 active:scale-95 group">
+            <Button className="rounded-3xl bg-primary text-black h-16 md:h-24 px-8 md:px-24 text-[11px] md:text-[13px] font-black uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl hover:scale-110 active:scale-95 group w-full md:w-auto">
               Start Consultation <ArrowRight size={24} className="ml-6 group-hover:translate-x-4 transition-transform" />
             </Button>
           </div>
@@ -305,7 +306,7 @@ const Home = () => {
       </section>
 
       {/* 6. FAQ SECTION */}
-      <section className="py-40 bg-white" id="faqs">
+      <section className="py-20 md:py-40 bg-white" id="faqs">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="flex items-center gap-10 mb-24">
             <div className="h-[2px] flex-1 bg-gray-100" />
@@ -314,14 +315,14 @@ const Home = () => {
           </div>
           <Accordion type="single" collapsible className="space-y-8">
             {faqs.map((faq, i) => (
-              <AccordionItem key={faq.id} value={`item-${i}`} className="border-4 border-gray-50 rounded-[4rem] px-16 data-[state=open]:border-primary/20 transition-all shadow-sm hover:shadow-md">
-                <AccordionTrigger className="text-2xl font-black uppercase tracking-tight py-14 hover:no-underline text-left group">
-                  <span className="flex items-center gap-8">
-                    <span className="text-primary/20 font-black text-6xl group-data-[state=open]:text-primary transition-colors">0{i + 1}</span>
+              <AccordionItem key={faq.id} value={`item-${i}`} className="border-4 border-gray-50 rounded-[2.5rem] md:rounded-[4rem] px-6 md:px-16 data-[state=open]:border-primary/20 transition-all shadow-sm hover:shadow-md">
+                <AccordionTrigger className="text-xl md:text-2xl font-black uppercase tracking-tight py-8 md:py-14 hover:no-underline text-left group">
+                  <span className="flex items-center gap-4 md:gap-8">
+                    <span className="text-primary/20 font-black text-4xl md:text-6xl group-data-[state=open]:text-primary transition-colors">0{i + 1}</span>
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 pb-14 text-xl font-medium leading-relaxed pl-24">
+                <AccordionContent className="text-gray-400 pb-8 md:pb-14 text-base md:text-xl font-medium leading-relaxed pl-12 md:pl-24">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

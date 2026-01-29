@@ -10,9 +10,25 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useToast } from "@/components/ui/use-toast";
 
 const AdminDashboard = () => {
-    const { projects, services, quotes } = useData();
+    const { projects, services, quotes, updateQuote } = useData();
+    const { toast } = useToast();
+    const [selectedQuote, setSelectedQuote] = useState<any>(null);
+
+    const handleStatusChange = async (quote: any, newStatus: string) => {
+        try {
+            await updateQuote({ ...quote, status: newStatus });
+            toast({ title: `Status Updated`, description: `Message marked as ${newStatus}` });
+            setSelectedQuote({ ...quote, status: newStatus });
+        } catch (error) {
+            console.error(error);
+            toast({ variant: "destructive", title: "Update failed" });
+        }
+    };
 
     // Sort quotes: pending first
     const recentQuotes = [...quotes].sort((a, b) =>
@@ -43,7 +59,10 @@ const AdminDashboard = () => {
                         <Button variant="ghost" className="text-white/40 hover:text-white rounded-lg px-4 h-9 text-xs font-semibold">List</Button>
                         <Button variant="ghost" className="text-white/40 hover:text-white rounded-lg px-4 h-9 text-xs font-semibold">Calendar</Button>
                     </div>
-                    <Button className="bg-[#A3E635] text-black hover:bg-white rounded-xl px-6 h-11 font-black transition-all shadow-[0_4px_20px_rgba(163,230,53,0.3)]">
+                    <Button
+                        onClick={() => toast({ title: "Task Manager", description: "Task creation feature is coming in the next update." })}
+                        className="bg-[#A3E635] text-black hover:bg-white rounded-xl px-6 h-11 font-black transition-all shadow-[0_4px_20px_rgba(163,230,53,0.3)]"
+                    >
                         <Plus className="mr-2 w-5 h-5" /> New Task
                     </Button>
                 </div>
@@ -85,7 +104,7 @@ const AdminDashboard = () => {
                             <h3 className="font-bold text-xl text-white">Incoming Inquiries</h3>
                             <Badge className="bg-[#A3E635]/10 text-[#A3E635] border-none rounded-lg px-2.5 py-1 text-[11px] font-black">{recentQuotes.length}</Badge>
                         </div>
-                        <button className="text-[11px] font-black text-white/20 uppercase tracking-widest hover:text-[#A3E635] transition-colors">See All Activities</button>
+                        <Link href="/admin/quotes" className="text-[11px] font-black text-white/20 uppercase tracking-widest hover:text-[#A3E635] transition-colors">See All Activities</Link>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -95,7 +114,8 @@ const AdminDashboard = () => {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-[#0D0F12] border border-white/5 rounded-[32px] p-8 hover:bg-[#12151A] transition-all group relative"
+                                className="bg-[#0D0F12] border border-white/5 rounded-[32px] p-8 hover:bg-[#12151A] transition-all group relative cursor-pointer"
+                                onClick={() => setSelectedQuote(quote)}
                             >
                                 <div className="flex justify-between items-start mb-8">
                                     <div className="flex items-center gap-4">
@@ -107,7 +127,13 @@ const AdminDashboard = () => {
                                             <span className="text-[10px] text-white/30 font-black uppercase tracking-wider">Status: {quote.status}</span>
                                         </div>
                                     </div>
-                                    <button className="text-white/20 hover:text-white p-2">
+                                    <button
+                                        className="text-white/20 hover:text-white p-2 z-10"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedQuote(quote);
+                                        }}
+                                    >
                                         <MoreHorizontal size={20} />
                                     </button>
                                 </div>
@@ -129,9 +155,11 @@ const AdminDashboard = () => {
                                                 </div>
                                             ))}
                                         </div>
-                                        <Link href="/admin/quotes" className="w-10 h-10 rounded-xl bg-white/[0.03] flex items-center justify-center text-white/20 group-hover:bg-[#A3E635] group-hover:text-black transition-all">
+                                        <div
+                                            className="w-10 h-10 rounded-xl bg-white/[0.03] flex items-center justify-center text-white/20 group-hover:bg-[#A3E635] group-hover:text-black transition-all"
+                                        >
                                             <ArrowUpRight size={18} />
-                                        </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
@@ -193,6 +221,58 @@ const AdminDashboard = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Detailed Message Dialog */}
+            <Dialog open={!!selectedQuote} onOpenChange={() => setSelectedQuote(null)}>
+                <DialogContent className="sm:max-w-[600px] bg-[#0A0C0F] border-white/10 text-white rounded-[40px] p-0 overflow-hidden shadow-2xl">
+                    <div className="p-10 space-y-8">
+                        <DialogHeader>
+                            <DialogTitle className="text-2xl font-black uppercase tracking-tighter">Inquiry Specifications</DialogTitle>
+                            <div className="text-white/40 font-bold uppercase text-[10px] tracking-widest mt-2">
+                                Logged on {selectedQuote?.created_at ? new Date(selectedQuote.created_at).toLocaleString() : 'N/A'}
+                            </div>
+                        </DialogHeader>
+
+                        <div className="grid grid-cols-2 gap-8 border-y border-white/5 py-8">
+                            <div>
+                                <p className="text-[10px] font-black text-white/20 uppercase tracking-widest mb-2">Subject Identity</p>
+                                <p className="text-sm font-bold text-white">{selectedQuote?.name}</p>
+                            </div>
+                            <div>
+                                <p className="text-[10px] font-black text-white/20 uppercase tracking-widest mb-2">Digital Address</p>
+                                <p className="text-sm font-bold text-[#A3E635]">{selectedQuote?.email}</p>
+                            </div>
+                        </div>
+
+                        <div className="space-y-4">
+                            <p className="text-[10px] font-black text-white/20 uppercase tracking-widest">Requirement Body</p>
+                            <div className="bg-white/5 p-6 rounded-3xl text-sm leading-relaxed text-white/70 italic border border-white/5">
+                                "{selectedQuote?.message}"
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 pt-4">
+                            <div className="flex gap-2">
+                                <Button
+                                    size="sm"
+                                    className={`rounded-xl px-5 h-10 font-bold text-xs transition-all ${selectedQuote?.status === 'reviewed' ? 'bg-blue-500 text-white' : 'bg-white/5 text-white/40 hover:text-white'}`}
+                                    onClick={() => selectedQuote && handleStatusChange(selectedQuote, 'reviewed')}
+                                >
+                                    <Clock className="w-4 h-4 mr-2" /> Mark Analyzed
+                                </Button>
+                                <Button
+                                    size="sm"
+                                    className={`rounded-xl px-5 h-10 font-bold text-xs transition-all ${selectedQuote?.status === 'contacted' ? 'bg-[#A3E635] text-black' : 'bg-white/5 text-white/40 hover:text-white'}`}
+                                    onClick={() => selectedQuote && handleStatusChange(selectedQuote, 'contacted')}
+                                >
+                                    <CheckCircle2 className="w-4 h-4 mr-2" /> Mark Contacted
+                                </Button>
+                            </div>
+                            <Button variant="ghost" onClick={() => setSelectedQuote(null)} className="text-white/20 hover:text-white font-bold text-xs">Close Console</Button>
+                        </div>
+                    </div>
+                </DialogContent>
+            </Dialog>
         </div>
     );
 };
