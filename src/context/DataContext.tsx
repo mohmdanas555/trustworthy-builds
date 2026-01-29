@@ -195,20 +195,29 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Generic Add/Update/Delete Helpers
     const performAdd = async (table: string, item: any, setState: Function, state: any[]) => {
         const { data, error } = await supabase.from(table).insert([item]).select();
-        if (error) { console.error(`Error adding to ${table}:`, error); return; }
+        if (error) {
+            console.error(`Error adding to ${table}:`, error);
+            throw error;
+        }
         if (data) setState([...state, data[0]]);
     };
 
     const performUpdate = async (table: string, item: any, setState: Function, state: any[]) => {
         const { id, ...updateData } = item;
         const { error } = await supabase.from(table).update(updateData).eq('id', id);
-        if (error) { console.error(`Error updating ${table}:`, error); return; }
+        if (error) {
+            console.error(`Error updating ${table}:`, error);
+            throw error;
+        }
         setState(state.map(i => i.id === id ? item : i));
     };
 
     const performDelete = async (table: string, id: number, setState: Function, state: any[]) => {
         const { error } = await supabase.from(table).delete().eq('id', id);
-        if (error) { console.error(`Error deleting from ${table}:`, error); return; }
+        if (error) {
+            console.error(`Error deleting from ${table}:`, error);
+            throw error;
+        }
         setState(state.filter(i => i.id !== id));
     };
 

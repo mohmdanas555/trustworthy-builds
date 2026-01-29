@@ -268,7 +268,6 @@ const Home = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              transition={{ delay: 0.2 }}
               className="group relative md:mt-40"
             >
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-gray-50">
