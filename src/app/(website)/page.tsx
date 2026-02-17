@@ -198,14 +198,18 @@ const Home = () => {
           <p className="text-gray-400 font-bold uppercase tracking-[0.4em] text-xs">Strategic Leadership Protocol</p>
         </div>
         <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 lg:gap-16">
-          {team.map((member) => (
+          {team.map((member, idx) => (
             <motion.div
               key={member.id}
               className="group cursor-pointer"
               whileHover={{ scale: 1.02 }}
             >
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden mb-10 border-8 border-gray-50 shadow-2xl relative">
-                <img src={member.image || `/images/team_1.png`} className="w-full h-full object-cover grayscale-[0.6] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" alt={member.name} />
+                <img
+                  src={member.image || `/images/team_${(idx % 2) + 1}.png`}
+                  className="w-full h-full object-cover grayscale-[0.6] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                  alt={member.name}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute bottom-10 left-0 right-0 text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
                   <span className="bg-white/10 backdrop-blur-md px-6 py-2 rounded-full text-white text-[10px] font-black uppercase tracking-widest border border-white/20">Executive Profile</span>

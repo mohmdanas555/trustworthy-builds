@@ -51,6 +51,9 @@ BEGIN
 END $$;
 
 -- 4. Initial Seed for Sample Team (Optional)
+-- NOTE: These are placeholder images. To add your actual engineer photos:
+--   Option 1: Upload through admin panel at http://localhost:3000/admin/team
+--   Option 2: Replace '/images/team_1.png' with the path to your actual engineer photos
 INSERT INTO public.team_members (name, role, image, bio, order_index)
 VALUES 
 ('Engr. Saud Shehatha', 'Founder & Chief executive officer', '/images/team_1.png', '15+ years experience in the construction industry.', 1),

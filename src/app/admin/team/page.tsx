@@ -120,7 +120,11 @@ const TeamManager = () => {
                         className="bg-[#0D0F12] border border-white/5 rounded-[32px] overflow-hidden group hover:border-[#A3E635]/20 transition-all shadow-xl"
                     >
                         <div className="aspect-[4/5] relative overflow-hidden">
-                            <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <img
+                                src={member.image || `/images/team_${(idx % 2) + 1}.png`}
+                                alt={member.name}
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F] via-transparent to-transparent opacity-60" />
 
                             {/* Action Overlay */}
